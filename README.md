@@ -108,11 +108,22 @@ Visit:
 
 http://127.0.0.1:8000
 
+📸 Screenshots
 Dashboard View
+<img width="1919" height="920" alt="111" src="https://github.com/user-attachments/assets/9cc1d321-7bfe-4eb6-814d-66eefd65928b" />
+
 Product Management Page
+<img width="1905" height="576" alt="222" src="https://github.com/user-attachments/assets/dc667935-297d-454e-b48e-cb4a9dfabdca" />
+
 Sales Creation Page
+<img width="1920" height="808" alt="555" src="https://github.com/user-attachments/assets/b34b03c5-493b-4a9f-826a-8de54984cec7" />
+
 Invoice Page
+<img width="1919" height="723" alt="444" src="https://github.com/user-attachments/assets/a366b8f7-ab63-4372-a83c-28be81651cf7" />
+
 Low Stock Alerts
+<img width="1918" height="779" alt="666" src="https://github.com/user-attachments/assets/c247811e-faeb-4b13-8169-839b4d9f3af0" />
+
 🔐 Authentication (Optional Enhancement)
 Login / Logout system (Laravel Auth)
 Session management
