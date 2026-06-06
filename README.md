@@ -1,59 +1,148 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+📦Laravel Inventory & Billing Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-stack web application built using Laravel Framework and MySQL to manage inventory, sales, stock tracking, and invoice generation in a structured business environment.
 
-## About Laravel
+🚀 Project Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The Laravel Inventory & Billing Management System is designed to automate core business operations such as product management, stock tracking, sales processing, and invoice generation.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This system follows the MVC (Model-View-Controller) architecture and demonstrates real-world software engineering practices used in enterprise applications.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+🎯 Key Features
+📦 Product Management
+Add new products
+Update product details
+Delete products
+View complete product list
+Track stock quantity
+Low stock monitoring
+💰 Sales Management
+Create sales transactions
+Select products and quantity
+Auto calculate total price
+Store customer details
+Maintain sales history
+📉 Inventory Control
+Automatic stock reduction after sales
+Prevents negative stock
+Low stock alert system
+Real-time quantity updates
+🧾 Invoice System
+Auto-generate invoices per sale
+Customer billing details
+Itemized product list
+Total calculation
+📊 Reporting Dashboard
+Total products count
+Total sales count
+Revenue tracking
+Low stock alerts
+🛠️ Tech Stack
+Backend: Laravel (PHP Framework)
+Frontend: Blade Templates + Bootstrap 5
+Database: MySQL
+Architecture: MVC Pattern
+Version Control: Git & GitHub
+🧱 System Architecture
 
-## Learning Laravel
+The system follows Laravel MVC architecture:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Model: Handles database logic (Products, Sales, SaleItems)
+View: Blade templates for UI (Products, Sales, Dashboard)
+Controller: Business logic handling requests and responses
+Database: MySQL relational structure
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Flow:
 
-## Laravel Sponsors
+User → Routes → Controller → Model → Database
+                     ↓
+                   View → User
+🗄️ Database Structure
+Products Table
+id
+name
+code
+price
+quantity
+low_stock_limit
+Sales Table
+id
+customer_name
+customer_id
+total_amount
+Sale_Items Table
+id
+sale_id
+product_id
+quantity
+unit_price
+subtotal
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Relationship:
 
-### Premium Partners
+One Sale → Many Sale Items
+One Product → Many Sale Items
+⚙️ Installation Guide
+1. Clone Repository
+git clone https://github.com/your-username/laravel-inventory-system.git
+cd laravel-inventory-system
+2. Install Dependencies
+composer install
+npm install
+3. Setup Environment
+cp .env.example .env
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Update database credentials in .env:
 
-## Contributing
+DB_DATABASE=your_database
+DB_USERNAME=root
+DB_PASSWORD=
+4. Generate Application Key
+php artisan key:generate
+5. Run Migrations
+php artisan migrate
+6. Start Server
+php artisan serve
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Visit:
 
-## Code of Conduct
+http://127.0.0.1:8000
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Dashboard View
+Product Management Page
+Sales Creation Page
+Invoice Page
+Low Stock Alerts
+🔐 Authentication (Optional Enhancement)
+Login / Logout system (Laravel Auth)
+Session management
+Role-based access control (future upgrade)
+📈 Future Improvements
+Barcode scanning system
+Customer management module
+Supplier & purchase orders
+Multi-user roles (Admin / Staff)
+Email invoice sending
+Advanced analytics dashboard
+API integration for mobile app
+👨‍💻 Development Methodology
+Requirement analysis
+System design using MVC
+Database design (MySQL relational model)
+Laravel-based development
+Functional testing
+System validation
+🧪 Testing Summary
+Product CRUD tested successfully
+Sales transactions validated
+Stock updates verified
+Invoice generation tested
+Low stock alerts working correctly
+📌 Conclusion
 
-## Security Vulnerabilities
+This project demonstrates a complete real-world business inventory system built using Laravel. It automates manual processes, improves accuracy, and provides scalable architecture suitable for enterprise-level applications.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+👤 Developer
+Name: S.M. Abdul Azoor
+Role: Software Engineering Intern / Student
+Framework: Laravel
