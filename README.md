@@ -104,6 +104,27 @@ php artisan migrate
 6. Start Server
 php artisan serve
 
+🧰 Development Environment Setup
+
+The application was developed using the following local development environment:
+
+XAMPP (Apache + MySQL)
+PHP (via XAMPP / Laravel requirements)
+Laravel Artisan Development Server
+MySQL Database (managed through XAMPP)
+🖥️ XAMPP Usage
+
+XAMPP was used to provide the MySQL database service required for the application.
+
+Steps:
+
+Start MySQL service from XAMPP Control Panel
+Ensure database connection is active before running Laravel
+🚀 Running the Project
+php artisan serve
+
+Then access:
+
 Visit:
 
 http://127.0.0.1:8000/products
