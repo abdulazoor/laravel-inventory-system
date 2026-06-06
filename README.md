@@ -106,7 +106,13 @@ php artisan serve
 
 Visit:
 
-http://127.0.0.1:8000
+http://127.0.0.1:8000/products
+http://127.0.0.1:8000/dashboard
+http://127.0.0.1:8000/products/create
+http://127.0.0.1:8000/sales
+http://127.0.0.1:8000/sales/create
+http://127.0.0.1:8000/low-stock
+
 
 📸 Screenshots
 Dashboard View
